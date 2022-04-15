@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Screens/LevelTransition.gd" type="Script" id=1]
+[ext_resource path="res://assets/misc/fonts/Arcade.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/menu/about3.png" type="Texture" id=3]
+[ext_resource path="res://assets/menu/menu buttons/back80.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu/menu buttons/back100.png" type="Texture" id=5]
+[ext_resource path="res://assets/menu/menu buttons/back50.png" type="Texture" id=6]
+[ext_resource path="res://src/About Page/Main.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 195
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Intro And Exit" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Opening" type="Control" parent="Intro And Exit"]
+process_priority = 7
+margin_left = 486.0
+margin_top = 297.0
+margin_right = 526.0
+margin_bottom = 337.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Intro And Exit/Opening"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 547.0
+margin_top = 310.0
+margin_right = 587.0
+margin_bottom = 350.0
+rect_scale = Vector2( -26.0722, -15.2655 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="introText" type="RichTextLabel" parent="Intro And Exit/Opening"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 0.812
+margin_left = -83.0
+margin_top = -43.0
+margin_right = 988.0
+margin_bottom = 451.0
+rect_scale = Vector2( 0.479998, 0.479998 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[wave]About"
+text = "About"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exitText" type="RichTextLabel" parent="Intro And Exit/Opening"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 0.812
+margin_left = -177.0
+margin_top = -46.0
+margin_right = 1319.52
+margin_bottom = 448.0
+rect_scale = Vector2( 0.479998, 0.479998 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[wave]Main Menu"
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -20, 0 )
+scale = Vector2( 0.56, 0.56 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ExitButton" type="Control" parent="."]
+margin_left = 12.0
+margin_top = -161.0
+margin_right = 52.0
+margin_bottom = -121.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="TextureButton" parent="ExitButton"]
+margin_left = 630.0
+margin_top = 422.0
+margin_right = 681.0
+margin_bottom = 466.0
+rect_scale = Vector2( 5.24, 1.51849 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="nextLevel" from="Intro And Exit" to="." method="_on_Intro_And_Exit_nextLevel"]
+[connection signal="pressed" from="ExitButton/button" to="." method="_on_button_pressed"]

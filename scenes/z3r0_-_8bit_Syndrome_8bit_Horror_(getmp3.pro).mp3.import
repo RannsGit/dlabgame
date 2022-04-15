@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/z3r0_-_8bit_Syndrome_8bit_Horror_(getmp3.pro).mp3-38bdf9d2b4768f0553986d935dfdcc65.mp3str"
+
+[deps]
+
+source_file="res://scenes/z3r0_-_8bit_Syndrome_8bit_Horror_(getmp3.pro).mp3"
+dest_files=[ "res://.import/z3r0_-_8bit_Syndrome_8bit_Horror_(getmp3.pro).mp3-38bdf9d2b4768f0553986d935dfdcc65.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
