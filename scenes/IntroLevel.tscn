@@ -1590,6 +1590,7 @@ script = ExtResource( 35 )
 
 [node name="keySprite" type="AnimatedSprite" parent="keyGold"]
 frames = SubResource( 45 )
+frame = 3
 playing = true
 
 [node name="keyCollision" type="CollisionShape2D" parent="keyGold"]
@@ -1613,7 +1614,7 @@ shape = SubResource( 42 )
 scale = Vector2( 0.637852, 0.637852 )
 z_index = 4
 frames = SubResource( 43 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Intro And Exit" type="CanvasLayer" parent="."]
